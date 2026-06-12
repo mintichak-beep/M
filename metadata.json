@@ -1,0 +1,6 @@
+{
+  "name": "ระบบบันทึกประสบการณ์การเรียนรู้รายวิชาปฏิบัติการพยาบาล",
+  "description": "ระบบติดตามและบันทึกประสบการณ์การเรียนรู้สำหรับนักศึกษาพยาบาลด้วย Dynamic QR Code",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
