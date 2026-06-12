@@ -35,25 +35,25 @@ export const TopNavigation: React.FC<{ onToggleSidebar: () => void }> = ({ onTog
       <div className="flex items-center gap-3">
         <button
           onClick={onToggleSidebar}
-          className="p-1.5 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-100 lg:hidden focus:ring-2 focus:ring-blue-500 cursor-pointer"
+          className="p-1.5 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-100 lg:hidden focus:ring-2 focus:ring-red-500 cursor-pointer"
           aria-label="Toggle Side Area"
         >
           <Menu className="w-5 h-5" />
         </button>
         <Link to="/" className="flex items-center gap-2">
-          <div className="p-1.5 bg-blue-600 rounded-lg text-white">
+          <div className="p-1.5 bg-red-600 rounded-lg text-white">
             <GraduationCap className="w-5 h-5" />
           </div>
-          <div className="hidden sm:block">
-            <h1 className="text-sm font-bold leading-tight font-display tracking-wide text-slate-900">
-              ระบบบันทึกประสบการณ์พยาบาลมารดาฯ
+          <div className="hidden md:block">
+            <h1 className="text-xs font-bold leading-tight font-display tracking-wide text-red-600">
+              สถาบันการพยาบาลศรีสวรินทิรา สภากาชาดไทย
             </h1>
-            <p className="text-[10px] text-slate-550 font-bold uppercase tracking-wider">
-              Nursing Learning Experience Tracking System
+            <p className="text-[9px] text-slate-500 font-bold uppercase tracking-wider">
+              Srisavarindhira Thai Red Cross Institute of Nursing
             </p>
           </div>
-          <div className="sm:hidden">
-            <h1 className="text-xs font-bold leading-tight font-display">STIN NURSING</h1>
+          <div className="md:hidden">
+            <h1 className="text-xs font-bold leading-tight font-display text-red-650">STIN NURSING</h1>
           </div>
         </Link>
       </div>
@@ -68,7 +68,7 @@ export const TopNavigation: React.FC<{ onToggleSidebar: () => void }> = ({ onTog
               navigate('/student/progress');
             }}
             className={`px-2.5 py-1 text-[11px] rounded transition-all cursor-pointer font-bold ${
-              role === 'student' ? 'bg-blue-600 text-white shadow-sm' : 'text-slate-500 hover:text-slate-900'
+              role === 'student' ? 'bg-red-600 text-white shadow-sm' : 'text-slate-500 hover:text-slate-900'
             }`}
             aria-label="Switch to Student Demo"
           >
@@ -98,7 +98,7 @@ export const TopNavigation: React.FC<{ onToggleSidebar: () => void }> = ({ onTog
             />
             <div className="hidden md:block text-left">
               <p className="text-xs font-bold text-slate-800">{user.name}</p>
-              <p className="text-[9px] text-slate-500 font-bold uppercase tracking-wider">{role}</p>
+              <p className="text-[9px] text-slate-550 font-bold uppercase tracking-wider">{role}</p>
             </div>
             <button
               onClick={() => {
@@ -115,7 +115,7 @@ export const TopNavigation: React.FC<{ onToggleSidebar: () => void }> = ({ onTog
         ) : (
           <Link
             to="/login"
-            className="text-xs font-bold text-blue-600 hover:text-blue-700 px-3.5 py-1.5 rounded-full border border-slate-200 hover:bg-slate-50 transition"
+            className="text-xs font-bold text-red-600 hover:text-red-700 px-3.5 py-1.5 rounded-full border border-slate-200 hover:bg-slate-50 transition"
           >
             เข้าสู่ระบบ
           </Link>
@@ -203,7 +203,7 @@ export const SidebarNavigation: React.FC<SidebarProps> = ({ isOpen, onClose }) =
                   </p>
                 </div>
               </div>
-              <div className="mt-3.5 px-3 py-1 bg-white border border-slate-200 rounded-md text-[10px] font-bold text-center text-blue-600 flex items-center justify-center gap-1.5 uppercase tracking-wider shadow-sm">
+              <div className="mt-3.5 px-3 py-1 bg-white border border-slate-200 rounded-md text-[10px] font-bold text-center text-red-600 flex items-center justify-center gap-1.5 uppercase tracking-wider shadow-sm">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                 {role === 'instructor' ? 'อาจารย์ผู้ประเมิน' : 'นักศึกษาชั้นคลินิก'}
               </div>
@@ -225,7 +225,7 @@ export const SidebarNavigation: React.FC<SidebarProps> = ({ isOpen, onClose }) =
                     isActive
                       ? role === 'instructor'
                         ? 'bg-[#0F172A] text-white shadow-xs'
-                        : 'bg-blue-600 text-white shadow-xs'
+                        : 'bg-red-600 text-white shadow-xs'
                       : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
                   }`
                 }
@@ -239,7 +239,7 @@ export const SidebarNavigation: React.FC<SidebarProps> = ({ isOpen, onClose }) =
 
         {/* Info Box Footer */}
         <div className="p-4 border-t border-slate-200 bg-slate-50/50 text-center">
-          <p className="text-[10px] text-[#0F172A] font-bold uppercase tracking-wider">FACULTY OF NURSING</p>
+          <p className="text-[10px] text-red-600 font-bold uppercase tracking-wider">สถาบันการพยาบาลศรีสวรินทิราฯ</p>
           <p className="text-[9px] text-slate-500 mt-0.5">Experience Tracking System v1.0</p>
         </div>
       </aside>
@@ -278,7 +278,7 @@ export const MobileBottomNavigation: React.FC = () => {
               isActive 
                 ? role === 'instructor' 
                   ? 'text-[#0F172A]' 
-                  : 'text-blue-600' 
+                  : 'text-red-600' 
                 : 'text-slate-400 hover:text-slate-900'
             }`
           }
@@ -306,7 +306,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({ breadcrumbs, addon }) =>
           <li key={idx} className="inline-flex items-center">
             {idx > 0 && <span className="mx-1.5 text-slate-350">/</span>}
             {bc.path ? (
-              <Link to={bc.path} className="hover:text-blue-600 transition">
+              <Link to={bc.path} className="hover:text-red-600 transition">
                 {bc.label}
               </Link>
             ) : (

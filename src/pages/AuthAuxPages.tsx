@@ -48,7 +48,7 @@ export const LoginPage: React.FC = () => {
           <div className="text-center mb-6">
             <h2 className="text-2xl font-bold text-slate-900 font-display">เข้าสู่ระบบลงทะเบียนหัตถการ</h2>
             <p className="text-xs text-slate-500 mt-1">
-              วิทยาลัยพยาบาลบรมราชชนนี (NS312 Account Only)
+              สถาบันการพยาบาลศรีสวรินทิรา สภากาชาดไทย (STIN Account Only)
             </p>
           </div>
 
@@ -57,7 +57,7 @@ export const LoginPage: React.FC = () => {
             <button
               onClick={() => handlePresetSelect('student')}
               className={`py-2 text-xs font-semibold rounded-md transition-all ${
-                selectedPreset === 'student' ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-500 hover:text-slate-800'
+                selectedPreset === 'student' ? 'bg-white text-red-600 shadow-sm' : 'text-slate-500 hover:text-slate-800'
               }`}
               type="button"
             >
@@ -66,7 +66,7 @@ export const LoginPage: React.FC = () => {
             <button
               onClick={() => handlePresetSelect('instructor')}
               className={`py-2 text-xs font-semibold rounded-md transition-all ${
-                selectedPreset === 'instructor' ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-500 hover:text-slate-800'
+                selectedPreset === 'instructor' ? 'bg-white text-red-600 shadow-sm' : 'text-slate-500 hover:text-slate-800'
               }`}
               type="button"
             >
@@ -84,7 +84,7 @@ export const LoginPage: React.FC = () => {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-800 text-sm focus:ring-2 focus:ring-blue-500/20 focus:border-blue-600 outline-none transition"
+                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-800 text-sm focus:ring-2 focus:ring-red-500/20 focus:border-red-600 outline-none transition"
                 placeholder="email@stin.ac.th"
               />
             </div>
@@ -98,7 +98,7 @@ export const LoginPage: React.FC = () => {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-800 text-sm focus:ring-2 focus:ring-blue-500/20 focus:border-blue-600 outline-none transition"
+                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-800 text-sm focus:ring-2 focus:ring-red-500/20 focus:border-red-600 outline-none transition"
               />
             </div>
 

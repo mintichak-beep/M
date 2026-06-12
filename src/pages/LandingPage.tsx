@@ -23,12 +23,12 @@ export const LandingPage: React.FC = () => {
       {/* Upper Navigation / Decorative Banner */}
       <nav className="bg-white border-b border-slate-200 py-4 px-6 sm:px-12 flex items-center justify-between shadow-xs">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-blue-600 rounded-lg text-white">
+          <div className="p-2 bg-red-600 rounded-lg text-white">
             <GraduationCap className="w-6 h-6" />
           </div>
           <div>
-            <h1 className="text-base font-bold text-slate-900 font-display">วิทยาลัยพยาบาลบรมราชชนนี</h1>
-            <p className="text-[11px] text-slate-500 font-medium uppercase tracking-wider">Boromarajonani College of Nursing</p>
+            <h1 className="text-base font-bold text-red-600 font-display">สถาบันการพยาบาลศรีสวรินทิรา สภากาชาดไทย</h1>
+            <p className="text-[11px] text-slate-550 font-bold uppercase tracking-wider">Srisavarindhira Thai Red Cross Institute of Nursing</p>
           </div>
         </div>
 
@@ -44,7 +44,7 @@ export const LandingPage: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-blue-55 text-blue-700 rounded-full text-xs font-bold font-mono border border-blue-105 mb-5"
+          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-red-50 text-red-700 rounded-full text-xs font-bold font-mono border border-red-200 mb-5"
         >
           <BookOpen className="w-3.5 h-3.5" />
           <span>COURSE NS312</span>
@@ -58,7 +58,7 @@ export const LandingPage: React.FC = () => {
           className="text-3xl sm:text-5xl font-black text-slate-900 font-display leading-[1.125] tracking-tight"
         >
           ระบบบันทึกประสบการณ์การเรียนรู้
-          <span className="block text-blue-600 mt-2 text-2xl sm:text-4xl text-wrap font-bold">
+          <span className="block text-red-600 mt-2 text-2xl sm:text-4xl text-wrap font-bold">
             รายวิชาปฏิบัติการพยาบาลมารดาและการผดุงครรภ์ ๑
           </span>
         </motion.h2>
@@ -112,7 +112,7 @@ export const LandingPage: React.FC = () => {
                   className="w-full inline-flex items-center justify-between px-5 py-3.5 bg-slate-900 text-white rounded-lg font-semibold text-sm hover:bg-slate-800 transition active:scale-98 cursor-pointer shadow-sm group-hover:translate-x-0"
                 >
                   <span>เข้าสู่ระบบระบบอาจารย์</span>
-                  <ArrowRight className="w-4 h-4 text-blue-400 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 text-red-400 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
             </Card>
@@ -126,15 +126,15 @@ export const LandingPage: React.FC = () => {
           >
             <Card className="h-full flex flex-col justify-between border-slate-200/90 shadow-sm relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-5 opacity-5 group-hover:scale-110 transition-transform">
-                <QrCode className="w-32 h-32 text-blue-900" />
+                <QrCode className="w-32 h-32 text-red-900" />
               </div>
 
               <div>
-                <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 mb-5 border border-blue-105">
+                <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center text-red-600 mb-5 border border-red-100">
                   <QrCode className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 font-display">นิสิต / นักศึกษาพยาบาล</h3>
-                <p className="text-xs text-blue-600 mt-2 uppercase tracking-wide font-semibold">STUDENT PORTAL</p>
+                <p className="text-xs text-red-650 mt-2 uppercase tracking-wide font-semibold">STUDENT PORTAL</p>
                 <p className="text-sm text-slate-600 mt-3 leading-relaxed">
                   สแกนคิวอาร์โค้ดเพื่อเช็คชื่อลานฝึก ลงบันทึกประสบการณ์ทำคลอดปกติ (LR/PP Procedures) เขียนบันทึกสะท้อนคิดส่งเพื่อขอรับคำวิจารณ์ และติดตามสถิติทักษะของตนเองแบบสด
                 </p>
@@ -143,10 +143,10 @@ export const LandingPage: React.FC = () => {
               <div className="mt-8">
                 <button
                   onClick={() => handleRoleSelection('student')}
-                  className="w-full inline-flex items-center justify-between px-5 py-3.5 bg-blue-600 text-white rounded-lg font-semibold text-sm hover:bg-blue-700 transition active:scale-98 cursor-pointer shadow-sm"
+                  className="w-full inline-flex items-center justify-between px-5 py-3.5 bg-red-600 text-white rounded-lg font-semibold text-sm hover:bg-red-700 transition active:scale-98 cursor-pointer shadow-sm"
                 >
                   <span>เข้าสู่ระบบระบบนักศึกษา</span>
-                  <ArrowRight className="w-4 h-4 text-blue-200 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 text-red-200 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
             </Card>
@@ -173,7 +173,7 @@ export const LandingPage: React.FC = () => {
       {/* Decorative Footer */}
       <footer className="bg-slate-900 border-t border-slate-800 text-slate-500 py-6 text-center text-xs">
         <div className="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p>© {new Date().getFullYear()} วิทยาลัยพยาบาลบรมราชชนนี. ระบบตรวจสอบหัตถการปฏิบัติการผดุงครรภ์</p>
+          <p>© {new Date().getFullYear()} สถาบันการพยาบาลศรีสวรินทิรา สภากาชาดไทย. ระบบตรวจสอบหัตถการปฏิบัติการผดุงครรภ์</p>
           <div className="flex gap-4 text-[11px] font-medium">
             <span className="text-[#10B981] flex items-center gap-1">
               <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block animate-ping" />

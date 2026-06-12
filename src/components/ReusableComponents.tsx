@@ -15,7 +15,7 @@ export const PrimaryButton: React.FC<ButtonProps> = ({ children, icon, className
   <button
     {...props}
     aria-label={ariaLabel}
-    className={`inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-blue-600 outline-none text-white font-medium text-sm rounded-lg shadow-sm hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 active:bg-blue-800 transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed ${className}`}
+    className={`inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-red-600 outline-none text-white font-medium text-sm rounded-lg shadow-sm hover:bg-red-700 focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 active:bg-red-800 transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed ${className}`}
   >
     {icon && <span className="w-4 h-4">{icon}</span>}
     {children}
@@ -26,7 +26,7 @@ export const SecondaryButton: React.FC<ButtonProps> = ({ children, icon, classNa
   <button
     {...props}
     aria-label={ariaLabel}
-    className={`inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white border border-slate-200 outline-none text-slate-700 font-medium text-sm rounded-lg shadow-sm hover:bg-slate-50 hover:text-slate-900 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 active:bg-slate-100 transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed ${className}`}
+    className={`inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white border border-slate-200 outline-none text-slate-700 font-medium text-sm rounded-lg shadow-sm hover:bg-slate-50 hover:text-slate-900 focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 active:bg-slate-100 transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed ${className}`}
   >
     {icon && <span className="w-4 h-4 text-slate-500">{icon}</span>}
     {children}
@@ -80,9 +80,9 @@ export const StatCard: React.FC<StatCardProps> = ({
 }) => {
   const colorMap = {
     blue: {
-      bg: 'bg-blue-50 border-blue-100',
-      text: 'text-blue-700',
-      iconContainer: 'bg-blue-100 text-blue-600',
+      bg: 'bg-red-50 border-red-100',
+      text: 'text-red-700',
+      iconContainer: 'bg-red-100 text-red-600',
     },
     emerald: {
       bg: 'bg-emerald-50 border-emerald-100',
@@ -187,7 +187,7 @@ export const TablePlaceholder: React.FC<TablePlaceholderProps> = ({ headers, row
 
 export const LoadingScreen: React.FC = () => (
   <div className="fixed inset-0 bg-slate-55 bg-opacity-70 backdrop-blur-xs flex flex-col items-center justify-center z-50">
-    <Loader2 className="w-10 h-10 text-blue-600 animate-spin" />
+    <Loader2 className="w-10 h-10 text-red-600 animate-spin" />
     <span className="mt-4 text-sm font-medium text-slate-700">กำลังดาวน์โหลดข้อมูลระบบพยาบาล...</span>
   </div>
 );
@@ -287,7 +287,7 @@ export const ConfirmDialog: React.FC<ConfirmDialogProps> = ({
           aria-describedby="dialog-desc"
         >
           <div className="flex items-start gap-4">
-            <div className={`p-2.5 rounded-full ${isDanger ? 'bg-rose-100 text-rose-600' : 'bg-blue-100 text-blue-600'}`}>
+            <div className={`p-2.5 rounded-full ${isDanger ? 'bg-rose-100 text-rose-600' : 'bg-red-100 text-red-605'}`}>
               {isDanger ? <AlertTriangle className="w-5 h-5" /> : <Info className="w-5 h-5" />}
             </div>
             <div>
@@ -339,8 +339,8 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onDismis
               icon: <AlertTriangle className="w-5 h-5 text-amber-600" />,
             },
             info: {
-              border: 'border-blue-200 bg-blue-50 text-blue-800',
-              icon: <Info className="w-5 h-5 text-blue-600" />,
+              border: 'border-red-200 bg-red-50/50 text-red-800',
+              icon: <Info className="w-5 h-5 text-red-600" />,
             },
           };
 
